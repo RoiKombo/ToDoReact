@@ -11,7 +11,7 @@ export default class App extends Component {
     //make a copy of the existing state
     const items = {...this.state.items};
     //add new item to the item variable
-    items[`item${Date.now()}`] = item;
+    items[`item${Date.now()}`] = item; //give each new item individual
     //set the new items object to state
     this.setState(
       { items })

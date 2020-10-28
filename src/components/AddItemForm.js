@@ -7,10 +7,13 @@ export default class AddItemForm extends Component {
         e.preventDefault();
         const NewItem = {
             item: this.itemRef.current.value,
-        }   
+        }
+        if(NewItem.item === ""){
+             return null
+        }   else {
         this.props.addItem(NewItem)
         e.currentTarget.reset();
-    }
+    }}
     render() {
         return (
             <div>
